@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+cmake_minimum_required(VERSION 2.6)
+file(TO_CMAKE_PATH "$ENV{IMAGINEPP_ROOT}/CMake" p)
+list(APPEND CMAKE_MODULE_PATH "${p}") #For old Imagine++
+list(APPEND CMAKE_SYSTEM_FRAMEWORK_PATH /Library/Frameworks) #Mac, why not auto?
+find_package(Imagine REQUIRED)
+
+project(MOPSI)
+add_executable(MOPSI main.cpp Tree.cpp Tree.h)
+ImagineUseModules(MOPSI Graphics)
+=======
 cmake_minimum_required(VERSION 2.6)
 file(TO_CMAKE_PATH "$ENV{IMAGINEPP_ROOT}/CMake" p)
 list(APPEND CMAKE_MODULE_PATH "${p}") #For old Imagine++
@@ -8,3 +19,4 @@ project(MOPSI)
 add_executable(MOPSI main.cpp Tree.cpp Tree.h)
 ImagineUseModules(MOPSI Graphics)
 
+>>>>>>> 4a026d98e6d8dfc3ef599098344b822ba7216338
